@@ -2,6 +2,13 @@
 
 An MCP server for Elasticsearch, Kibana, and Elastic Security, connecting to Elastic's Agent Builder MCP endpoint via HTTP transport.
 
+## Configuration
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `kibana_url` | Yes | Base Kibana URL (e.g., `https://kibana.example.com` or with space: `https://kibana.example.com/s/my-space`) |
+| `api_key` | Yes | Kibana API key (without "ApiKey " prefix) |
+
 ## Tools
 
 ### `platform_core_search`
@@ -164,13 +171,6 @@ tool call library/elastic -m platform_core_search -p query="show me recent error
 # Generate ES|QL query
 tool call library/elastic -m platform_core_generate_esql -p query="count logs by severity"
 ```
-
-### Configuration
-
-| Field | Required | Description |
-|-------|----------|-------------|
-| `kibana_url` | Yes | Base Kibana URL (e.g., `https://kibana.example.com` or with space: `https://kibana.example.com/s/my-space`) |
-| `api_key` | Yes | Kibana API key (without "ApiKey " prefix) |
 
 ### Prerequisites
 
