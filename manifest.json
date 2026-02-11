@@ -54,6 +54,7 @@
   },
   "_meta": {
     "store.tool.mcpb": {
+      "categories": ["database", "monitoring", "security"],
       "static_responses": {
         "tools/list": {
           "tools": [
