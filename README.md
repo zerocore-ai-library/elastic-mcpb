@@ -2,6 +2,42 @@
 
 An MCP server for Elasticsearch, Kibana, and Elastic Security, connecting to Elastic's Agent Builder MCP endpoint via HTTP transport.
 
+## Setup
+
+### Using tool CLI
+
+Install the CLI from https://github.com/zerocore-ai/tool-cli
+
+```bash
+# Install from tool.store
+tool install library/elastic
+```
+
+```bash
+# View available tools
+tool info library/elastic
+```
+
+```bash
+# List indices
+tool call library/elastic -m platform_core_list_indices
+```
+
+```bash
+# Search data
+tool call library/elastic -m platform_core_search -p query="show me recent errors"
+```
+
+```bash
+# Generate ES|QL query
+tool call library/elastic -m platform_core_generate_esql -p query="count logs by severity"
+```
+
+### Prerequisites
+
+- Kibana with Agent Builder MCP enabled
+- API key with appropriate Kibana application privileges
+
 ## Configuration
 
 | Field | Required | Description |
@@ -140,42 +176,6 @@ Search Security Labs content for malware, attack techniques, and MITRE ATT&CK in
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `query` | string | Yes | Search query for Security Labs articles |
-
-## Setup
-
-### Using tool CLI
-
-Install the CLI from https://github.com/zerocore-ai/tool-cli
-
-```bash
-# Install from tool.store
-tool install library/elastic
-```
-
-```bash
-# View available tools
-tool info library/elastic
-```
-
-```bash
-# List indices
-tool call library/elastic -m platform_core_list_indices
-```
-
-```bash
-# Search data
-tool call library/elastic -m platform_core_search -p query="show me recent errors"
-```
-
-```bash
-# Generate ES|QL query
-tool call library/elastic -m platform_core_generate_esql -p query="count logs by severity"
-```
-
-### Prerequisites
-
-- Kibana with Agent Builder MCP enabled
-- API key with appropriate Kibana application privileges
 
 ## License
 
